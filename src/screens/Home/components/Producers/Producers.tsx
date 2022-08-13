@@ -1,17 +1,18 @@
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, ImageSourcePropType } from "react-native";
 import React, { useEffect, useState } from "react";
 
 import { fetchProducers } from "../../../../services/loadData";
 
+import { ProducerCard } from "./ProducerCard";
 import styles from "./styles";
 
 interface ProducersContentProps {
-  titulo: string;
-  lista: Array<{
-    nome: string;
-    imagem: string;
-    distancia: string;
-    estrelas: number;
+  title: string;
+  list: Array<{
+    name: string;
+    image: ImageSourcePropType;
+    distance: string;
+    stars: number;
   }>;
 }
 
@@ -31,19 +32,19 @@ const Producers = ({ header: Header }: ProducersProps) => {
   const ListHeader = () => (
     <>
       <Header />
-      <Text style={styles.title}>{producers.titulo}</Text>
+      <Text style={styles.title}>{producers.title}</Text>
     </>
   );
 
-  if (!producers.lista) {
+  if (!producers.list) {
     return <View />;
   }
 
   return (
     <FlatList
-      data={producers.lista}
-      renderItem={({ item: { nome } }) => <Text>{nome}</Text>}
-      keyExtractor={({ nome }) => nome}
+      data={producers.list}
+      renderItem={({ item }) => <ProducerCard {...item} />}
+      keyExtractor={({ name }) => name}
       ListHeaderComponent={() => <ListHeader />}
     />
   );

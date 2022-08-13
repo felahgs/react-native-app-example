@@ -8,37 +8,37 @@ const gerarNumeroAleatorio = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
 const produtores = {
-  titulo: "Produtores",
-  lista: [
+  title: "Produtores",
+  list: [
     {
-      nome: "Green",
-      imagem: green,
-      distancia: `${gerarNumeroAleatorio(1, 500)}m`,
-      estrelas: gerarNumeroAleatorio(1, 5),
+      name: "Green",
+      image: green,
+      distance: `${gerarNumeroAleatorio(1, 500)}m`,
+      stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      nome: "Salad",
-      imagem: salad,
-      distancia: `${gerarNumeroAleatorio(1, 500)}m`,
-      estrelas: gerarNumeroAleatorio(1, 5),
+      name: "Salad",
+      image: salad,
+      distance: `${gerarNumeroAleatorio(1, 500)}m`,
+      stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      nome: "Jenny Jack Farm",
-      imagem: jennyJack,
-      distancia: `${gerarNumeroAleatorio(1, 500)}m`,
-      estrelas: gerarNumeroAleatorio(1, 5),
+      name: "Jenny Jack Farm",
+      image: jennyJack,
+      distance: `${gerarNumeroAleatorio(1, 500)}m`,
+      stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      nome: "Grow",
-      imagem: grow,
-      distancia: `${gerarNumeroAleatorio(1, 500)}m`,
-      estrelas: gerarNumeroAleatorio(1, 5),
+      name: "Grow",
+      image: grow,
+      distance: `${gerarNumeroAleatorio(1, 500)}m`,
+      stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      nome: "Potager",
-      imagem: potager,
-      distancia: `${gerarNumeroAleatorio(1, 500)}m`,
-      estrelas: gerarNumeroAleatorio(1, 5),
+      name: "Potager",
+      image: potager,
+      distance: `${gerarNumeroAleatorio(1, 500)}m`,
+      stars: gerarNumeroAleatorio(1, 5),
     },
   ],
 };

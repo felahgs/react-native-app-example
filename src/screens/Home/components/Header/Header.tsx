@@ -9,8 +9,8 @@ import logo from "../../../../../assets/logo.png";
 import styles from "./styles";
 
 interface HeaderProps {
-  boasVindas: string;
-  legenda: string;
+  welcoming: string;
+  caption: string;
 }
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
-      <Text style={styles.welcome}>{headerContent.boasVindas}</Text>
+      <Text style={styles.welcome}>{headerContent.welcoming}</Text>
       <Text style={styles.caption}>Encontre os melhores produtores!</Text>
     </View>
   );
