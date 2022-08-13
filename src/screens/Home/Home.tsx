@@ -1,12 +1,13 @@
 import { View } from "react-native";
 import React from "react";
 
-import { Header } from "./components";
+import { Header } from "./components/Header";
+import { Producers } from "./components/Producers";
 
 const Home = () => {
   return (
     <View>
-      <Header />
+      <Producers header={Header} />
     </View>
   );
 };

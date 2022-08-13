@@ -14,9 +14,11 @@ export default StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     fontWeight: "bold",
+    color: "#464646",
   },
   caption: {
     fontSize: 16,
     lineHeight: 26,
+    color: "#A3A3A3",
   },
 });

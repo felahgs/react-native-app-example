@@ -1,18 +1,38 @@
 import { View, Text, Image } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import React from "react";
+
+import { fetchHeader } from "../../../../services/loadData";
 
 import logo from "../../../../../assets/logo.png";
 
 import styles from "./styles";
 
-function Header() {
+interface HeaderProps {
+  boasVindas: string;
+  legenda: string;
+}
+
+const Header = () => {
+  const [headerContent, setHeaderContent] = useState<HeaderProps>(
+    {} as HeaderProps,
+  );
+
+  useEffect(() => {
+    setHeaderContent(fetchHeader());
+  }, []);
+
+  useEffect(() => {
+    console.log("headerContent", headerContent);
+  }, [headerContent]);
+
   return (
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
-      <Text style={styles.welcome}>Olá Felipe</Text>
+      <Text style={styles.welcome}>{headerContent.boasVindas}</Text>
       <Text style={styles.caption}>Encontre os melhores produtores!</Text>
     </View>
   );
-}
+};
 
 export { Header };
