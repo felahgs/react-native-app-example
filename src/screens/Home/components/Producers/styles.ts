@@ -34,6 +34,7 @@ export default StyleSheet.create({
     borderRadius: 6,
     marginVertical: 16,
     marginLeft: 16,
+    marginRight: 8,
   },
   info: {
     flex: 1,
