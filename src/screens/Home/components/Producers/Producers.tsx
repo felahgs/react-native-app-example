@@ -1,48 +1,32 @@
-import { View, Text, FlatList, ImageSourcePropType } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { View, Text, FlatList } from 'react-native';
+import React from 'react';
 
-import { fetchProducers } from '../../../../services/loadData';
+import useProducers from '../../../../hooks/useProducers';
 
 import { ProducerCard } from './ProducerCard';
 import styles from './styles';
-
-interface ProducersContentProps {
-  title: string;
-  list: Array<{
-    name: string;
-    image: ImageSourcePropType;
-    distance: string;
-    stars: number;
-  }>;
-}
 
 interface ProducersProps {
   header: () => JSX.Element;
 }
 
 const Producers = ({ header: Header }: ProducersProps) => {
-  const [producers, setProducersContent] = useState<ProducersContentProps>(
-    {} as ProducersContentProps,
-  );
-
-  useEffect(() => {
-    setProducersContent(fetchProducers());
-  }, []);
+  const { title, list } = useProducers();
 
   const ListHeader = () => (
     <>
       <Header />
-      <Text style={styles.title}>{producers.title}</Text>
+      <Text style={styles.title}>{title}</Text>
     </>
   );
 
-  if (!producers.list) {
+  if (!list) {
     return <View />;
   }
 
   return (
     <FlatList
-      data={producers.list}
+      data={list}
       renderItem={({ item }) => <ProducerCard {...item} />}
       keyExtractor={({ name }) => name}
       ListHeaderComponent={() => <ListHeader />}

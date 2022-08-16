@@ -5,7 +5,7 @@ import {
   ImageSourcePropType,
   TouchableOpacity,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 
 import { Stars } from '../../../../components/Stars';
 
@@ -18,12 +18,11 @@ interface ProducerCardProps {
   stars: number;
 }
 const ProducerCard = ({ name, image, distance, stars }: ProducerCardProps) => {
-  const [selected, setSelected] = useState(false);
+  // const [selected, setSelected] = useState(false);
+  const [selected, toggleSelected] = useReducer(value => !value, false);
 
   return (
-    <TouchableOpacity
-      style={styles.card}
-      onPress={() => setSelected(!selected)}>
+    <TouchableOpacity style={styles.card} onPress={() => toggleSelected()}>
       <Image
         source={image}
         style={styles.image}
