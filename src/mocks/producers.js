@@ -1,41 +1,41 @@
-import green from "../../assets/produtores/green.png";
-import salad from "../../assets/produtores/salad.png";
-import jennyJack from "../../assets/produtores/jenny-jack.png";
-import grow from "../../assets/produtores/grow.png";
-import potager from "../../assets/produtores/potager.png";
+import green from '../../assets/produtores/green.png';
+import salad from '../../assets/produtores/salad.png';
+import jennyJack from '../../assets/produtores/jenny-jack.png';
+import grow from '../../assets/produtores/grow.png';
+import potager from '../../assets/produtores/potager.png';
 
 const gerarNumeroAleatorio = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
 const produtores = {
-  title: "Produtores",
+  title: 'Produtores',
   list: [
     {
-      name: "Green",
+      name: 'Green',
       image: green,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      name: "Salad",
+      name: 'Salad',
       image: salad,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      name: "Jenny Jack Farm",
+      name: 'Jenny Jack Farm',
       image: jennyJack,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      name: "Grow",
+      name: 'Grow',
       image: grow,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
     },
     {
-      name: "Potager",
+      name: 'Potager',
       image: potager,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),

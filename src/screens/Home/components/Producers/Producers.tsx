@@ -1,10 +1,10 @@
-import { View, Text, FlatList, ImageSourcePropType } from "react-native";
-import React, { useEffect, useState } from "react";
+import { View, Text, FlatList, ImageSourcePropType } from 'react-native';
+import React, { useEffect, useState } from 'react';
 
-import { fetchProducers } from "../../../../services/loadData";
+import { fetchProducers } from '../../../../services/loadData';
 
-import { ProducerCard } from "./ProducerCard";
-import styles from "./styles";
+import { ProducerCard } from './ProducerCard';
+import styles from './styles';
 
 interface ProducersContentProps {
   title: string;

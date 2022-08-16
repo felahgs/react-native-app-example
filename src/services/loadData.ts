@@ -1,5 +1,5 @@
-import producers from "../mocks/producers";
-import header from "../mocks/header";
+import producers from '../mocks/producers';
+import header from '../mocks/header';
 
 export const fetchProducers = () => {
   return producers;

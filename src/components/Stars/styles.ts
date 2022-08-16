@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   star: {
@@ -10,6 +10,6 @@ export default StyleSheet.create({
     height: 36,
   },
   stars: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
 });
