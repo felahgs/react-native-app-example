@@ -1,10 +1,8 @@
 import { View, Text, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
-// import React from "react";
 
-import { fetchHeader } from '../../../../services/loadData';
-
-import logo from '../../../../../assets/logo.png';
+import { fetchHeader } from 'services/loadData';
+import logo from 'assets/logo.png';
 
 import styles from './styles';
 

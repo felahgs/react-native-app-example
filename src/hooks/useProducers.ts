@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { ProducerType } from '../models/api/fetchProducers';
+import { ProducerType } from 'models/api/fetchProducers';
 
-import { fetchProducers } from '../services/loadData';
+import { fetchProducers } from 'services/loadData';
 
 export default function useProducers() {
   const [title, setTitle] = useState<string>('');
