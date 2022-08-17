@@ -21,7 +21,7 @@ module.exports = {
           services: './src/services',
           models: './src/models',
           mocks: './src/mocks',
-          hooks: './src/screens',
+          hooks: './src/hooks',
           utils: './src/utils',
         },
       },

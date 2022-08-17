@@ -1,9 +1,10 @@
-import { View, Text, FlatList } from 'react-native';
 import React from 'react';
+import { View, Text, FlatList } from 'react-native';
 
-import useProducers from '../../../../hooks/useProducers';
+import useProducers from 'hooks/useProducers';
 
 import { ProducerCard } from './ProducerCard';
+
 import styles from './styles';
 
 interface ProducersProps {

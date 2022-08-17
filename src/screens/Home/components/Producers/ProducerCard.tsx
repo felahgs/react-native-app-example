@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import React, { useReducer } from 'react';
 
-import { Stars } from '../../../../components/Stars';
+import { Stars } from 'components/Stars';
 
 import styles from './styles';
 
