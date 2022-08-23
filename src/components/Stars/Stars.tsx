@@ -1,10 +1,10 @@
-import { View, Image, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+import { View, Image, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
 
-import star from 'assets/estrela.png';
-import grayStar from 'assets/estrelaCinza.png';
+import star from "assets/estrela.png";
+import grayStar from "assets/estrelaCinza.png";
 
-import styles from './styles';
+import styles from "./styles";
 
 interface StarsProps {
   value: number;

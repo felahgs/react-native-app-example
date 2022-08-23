@@ -1,10 +1,10 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import React from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Home, TopProducers } from 'screens';
+import { Home, TopProducers } from "screens";
 
 const styles = StyleSheet.create({
   screen: {

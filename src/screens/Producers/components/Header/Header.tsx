@@ -1,10 +1,10 @@
-import { View, Text, Image } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { View, Text, Image } from "react-native";
+import React, { useEffect, useState } from "react";
 
-import { fetchHeader } from 'services/loadData';
-import logo from 'assets/logo.png';
+import { fetchHeader } from "services/loadData";
+import logo from "assets/logo.png";
 
-import styles from './styles';
+import styles from "./styles";
 
 interface HeaderProps {
   topProducers?: boolean;
@@ -28,7 +28,7 @@ const Header = ({ topProducers }: HeaderProps) => {
   }, []);
 
   useEffect(() => {
-    console.log('headerContent', headerContent);
+    console.log("headerContent", headerContent);
   }, [headerContent]);
 
   return (

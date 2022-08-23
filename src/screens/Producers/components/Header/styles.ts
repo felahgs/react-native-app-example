@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   header: {
-    backgroundColor: '#F6F6F6',
+    backgroundColor: "#F6F6F6",
     padding: 16,
   },
   image: {
@@ -13,12 +13,12 @@ export default StyleSheet.create({
     marginTop: 24,
     fontSize: 26,
     lineHeight: 42,
-    fontWeight: 'bold',
-    color: '#464646',
+    fontWeight: "bold",
+    color: "#464646",
   },
   caption: {
     fontSize: 16,
     lineHeight: 26,
-    color: '#A3A3A3',
+    color: "#A3A3A3",
   },
 });

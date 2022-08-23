@@ -4,12 +4,12 @@ import {
   Image,
   ImageSourcePropType,
   TouchableOpacity,
-} from 'react-native';
-import React, { useReducer } from 'react';
+} from "react-native";
+import React, { useReducer } from "react";
 
-import { Stars } from 'components/Stars';
+import { Stars } from "components/Stars";
 
-import styles from './styles';
+import styles from "./styles";
 
 interface ProducerCardProps {
   name: string;

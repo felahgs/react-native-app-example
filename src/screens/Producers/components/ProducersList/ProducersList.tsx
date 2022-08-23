@@ -1,18 +1,21 @@
-import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import React from "react";
+import { View, Text, FlatList } from "react-native";
 
-import useProducers from 'hooks/useProducers';
+import useProducers from "hooks/useProducers";
 
-import { ProducerCard } from './ProducerCard';
+import { ProducerCard } from "./ProducerCard";
 
-import styles from './styles';
+import styles from "./styles";
 
 interface ProducersProps {
-  header: ({topProducers}: {topProducers?: boolean}) => JSX.Element;
-  topProducers?: boolean
+  header: ({ topProducers }: { topProducers?: boolean }) => JSX.Element;
+  topProducers?: boolean;
 }
 
-const ProducersList = ({ header: Header, topProducers = false }: ProducersProps) => {
+const ProducersList = ({
+  header: Header,
+  topProducers = false,
+}: ProducersProps) => {
   const { title, list } = useProducers(topProducers);
 
   const ListHeader = () => (
