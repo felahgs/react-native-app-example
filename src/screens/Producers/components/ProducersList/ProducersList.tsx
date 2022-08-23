@@ -8,15 +8,16 @@ import { ProducerCard } from './ProducerCard';
 import styles from './styles';
 
 interface ProducersProps {
-  header: () => JSX.Element;
+  header: ({topProducers}: {topProducers?: boolean}) => JSX.Element;
+  topProducers?: boolean
 }
 
-const Producers = ({ header: Header }: ProducersProps) => {
+const ProducersList = ({ header: Header, topProducers = false }: ProducersProps) => {
   const { title, list } = useProducers();
 
   const ListHeader = () => (
     <>
-      <Header />
+      <Header topProducers={topProducers} />
       <Text style={styles.title}>{title}</Text>
     </>
   );
@@ -35,4 +36,4 @@ const Producers = ({ header: Header }: ProducersProps) => {
   );
 };
 
-export { Producers };
+export { ProducersList };

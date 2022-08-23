@@ -14,7 +14,7 @@ module.exports = {
     },
   ],
   rules: {
-    quotes: ['warn', 'single'],
+    quotes: ['off', 'single'],
     'import-helpers/order-imports': [
       'warn',
       {
@@ -22,6 +22,7 @@ module.exports = {
         groups: [
           ['/^react[/a-z]*/', '/^react-native[/a-z]*/'],
           'module',
+          ['/^[/a-zA-Z]/', 'absolute'],
           ['parent'],
           ['sibling', 'index'],
           ['/^./styles/'],
