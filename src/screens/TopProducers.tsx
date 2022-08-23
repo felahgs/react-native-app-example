@@ -7,4 +7,4 @@ const TopProducers = () => {
   return  <Producers topProducers/>
 }
 
-export default TopProducers
+export  { TopProducers }

@@ -13,7 +13,7 @@ interface ProducersProps {
 }
 
 const ProducersList = ({ header: Header, topProducers = false }: ProducersProps) => {
-  const { title, list } = useProducers();
+  const { title, list } = useProducers(topProducers);
 
   const ListHeader = () => (
     <>
