@@ -18,6 +18,7 @@ module.exports = {
         alias: {
           screens: "./src/screens",
           components: "./src/components",
+          constants: "./src/constants",
           services: "./src/services",
           models: "./src/models",
           mocks: "./src/mocks",

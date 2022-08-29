@@ -3,15 +3,20 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Home, TopProducers } from "screens";
+import { TopProducers } from "screens";
+import routes from "constants/routes";
+
+import ProducerRoutes from "./ProducerRoutes";
 
 const Tab = createBottomTabNavigator();
 const AppRoutes = () => {
+  const { HOME, TOP_PRODUCERS } = routes;
+
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Producers" component={Home} />
-        <Tab.Screen name="TopProducers" component={TopProducers} />
+        <Tab.Screen name={HOME} component={ProducerRoutes} />
+        <Tab.Screen name={TOP_PRODUCERS} component={TopProducers} />
       </Tab.Navigator>
     </NavigationContainer>
   );

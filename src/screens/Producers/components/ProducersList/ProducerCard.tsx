@@ -7,6 +7,8 @@ import {
 } from "react-native";
 import React, { useReducer } from "react";
 
+import { useNavigation } from "@react-navigation/native";
+
 import { Stars } from "components/Stars";
 
 import styles from "./styles";
@@ -18,11 +20,14 @@ interface ProducerCardProps {
   stars: number;
 }
 const ProducerCard = ({ name, image, distance, stars }: ProducerCardProps) => {
-  // const [selected, setSelected] = useState(false);
-  const [selected, toggleSelected] = useReducer(value => !value, false);
+  const [selected] = useReducer(value => !value, false);
+  const navigation = useNavigation();
+
+  const handleNavigation = () => navigation.navigate("Producer" as never);
 
   return (
-    <TouchableOpacity style={styles.card} onPress={() => toggleSelected()}>
+    // <TouchableOpacity style={styles.card} onPress={() => toggleSelected()}>
+    <TouchableOpacity onPress={handleNavigation} style={styles.card}>
       <Image
         source={image}
         style={styles.image}
