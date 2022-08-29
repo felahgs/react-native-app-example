@@ -7,11 +7,19 @@ import routes from "constants/routes";
 
 const Stack = createNativeStackNavigator();
 
-export default function ProducerRoutes() {
-  const { PRODUCER, PRODUCERS } = routes;
+interface ProducerRoutesProps {
+  RootComponent?: () => JSX.Element;
+  rootPath?: string;
+}
+
+export default function ProducerRoutes({
+  RootComponent = Home,
+  rootPath = routes.HOME,
+}: ProducerRoutesProps) {
+  const { PRODUCER } = routes;
   return (
     <Stack.Navigator>
-      <Stack.Screen name={PRODUCERS} component={Home} />
+      <Stack.Screen name={rootPath} component={RootComponent} />
       <Stack.Screen name={PRODUCER} component={Producer} />
     </Stack.Navigator>
   );
