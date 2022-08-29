@@ -23,6 +23,7 @@ module.exports = {
           mocks: "./src/mocks",
           hooks: "./src/hooks",
           utils: "./src/utils",
+          routes: "./src/routes",
         },
       },
     ],
