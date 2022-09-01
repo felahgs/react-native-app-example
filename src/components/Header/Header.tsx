@@ -4,35 +4,43 @@ import {
   Dimensions,
   TouchableOpacity,
   ImageSourcePropType,
+  Text,
 } from "react-native";
 
-import { Text } from "components/Text";
 import topo from "assets/topo.png";
-
-import Gradiente from "../assets/gradiente.svg";
-import VoltarSVG from "../assets/voltar.svg";
+import Gradient from "assets/gradiente.svg";
+import BackIcon from "assets/voltar.svg";
 
 const largura = Dimensions.get("screen").width;
 
-import styles from "./styles";
+import getStyles from "./styles";
 
 interface HeaderProps {
   title: string;
-  image: ImageSourcePropType;
+  image?: ImageSourcePropType;
+  height?: string | number;
 }
 
-export default function Header({ title, image = topo }: HeaderProps) {
+const DEFAULT_HEIGHT = 270;
+
+export function Header({
+  title,
+  image = topo,
+  height = DEFAULT_HEIGHT,
+}: HeaderProps) {
+  const styles = getStyles(height);
+
   return (
     <>
       <Image source={image} style={styles.header} />
-      <Gradiente
+      <Gradient
         width={largura}
         height={(130 / 360) * largura}
         style={styles.gradient}
       />
       <Text style={styles.title}>{title}</Text>
       <TouchableOpacity onPress={() => {}} style={styles.buttonBack}>
-        <VoltarSVG color="white" style={styles.back} />
+        <BackIcon color="white" style={styles.back} />
       </TouchableOpacity>
     </>
   );

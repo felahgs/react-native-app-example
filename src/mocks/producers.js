@@ -35,7 +35,7 @@ const produtores = {
             price: "R$ 40,00",
             image: pepino,
           },
-          itens: [
+          items: [
             {
               name: "Brócolis",
               image: brocolis,
@@ -55,7 +55,7 @@ const produtores = {
 
             image: brocolis,
           },
-          itens: [
+          items: [
             {
               name: "Brócolis",
               image: brocolis,
@@ -79,7 +79,7 @@ const produtores = {
 
             image: verduras,
           },
-          itens: [
+          items: [
             {
               name: "Tomate",
               image: tomate,
@@ -103,7 +103,7 @@ const produtores = {
 
             image: tomate,
           },
-          itens: [
+          items: [
             {
               name: "Tomate",
               image: tomate,
@@ -131,7 +131,7 @@ const produtores = {
 
             image: batata,
           },
-          itens: [
+          items: [
             {
               name: "Batata",
               image: batata,
@@ -147,7 +147,7 @@ const produtores = {
 
             image: brocolis,
           },
-          itens: [
+          items: [
             {
               name: "Tomate",
               image: tomate,
@@ -175,7 +175,7 @@ const produtores = {
 
             image: aspargos,
           },
-          itens: [
+          items: [
             {
               name: "Abóbora",
               image: abobora,
@@ -195,7 +195,7 @@ const produtores = {
 
             image: abobora,
           },
-          itens: [
+          items: [
             {
               name: "Tomate",
               image: tomate,
@@ -223,7 +223,7 @@ const produtores = {
 
             image: pepino,
           },
-          itens: [
+          items: [
             {
               name: "Pepino",
               image: pepino,
@@ -239,7 +239,7 @@ const produtores = {
 
             image: cenoura2,
           },
-          itens: [
+          items: [
             {
               name: "Brócolis",
               image: brocolis,

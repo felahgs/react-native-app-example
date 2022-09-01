@@ -1,29 +1,32 @@
-import {
-  Text,
-  View,
-  Image,
-  ImageSourcePropType,
-  TouchableOpacity,
-} from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import React, { useReducer } from "react";
 
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
 
+import routes from "constants/routes";
 import { Stars } from "components/Stars";
+import { ProducerType as ProducerCardProps } from "models/api/fetchProducers";
+import { PageStackProps } from "models/routes/ProducerPage";
 
 import styles from "./styles";
 
-interface ProducerCardProps {
-  name: string;
-  image: ImageSourcePropType;
-  distance?: string;
-  stars: number;
-}
-const ProducerCard = ({ name, image, distance, stars }: ProducerCardProps) => {
-  const [selected] = useReducer(value => !value, false);
-  const navigation = useNavigation();
+const { PRODUCER } = routes;
 
-  const handleNavigation = () => navigation.navigate("Producer" as never);
+const ProducerCard = ({
+  name,
+  image,
+  distance,
+  stars,
+  baskets,
+}: ProducerCardProps) => {
+  const [selected] = useReducer(value => !value, false);
+  const navigation = useNavigation<NativeStackNavigationProp<PageStackProps>>();
+
+  const producerProps = { name, image, baskets };
+
+  const handleNavigation = () =>
+    navigation.navigate(PRODUCER, { ...producerProps });
 
   return (
     // <TouchableOpacity style={styles.card} onPress={() => toggleSelected()}>
