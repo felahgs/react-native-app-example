@@ -7,11 +7,11 @@ import {
   Text,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 import topo from "assets/topo.png";
 import Gradient from "assets/gradiente.svg";
 import BackIcon from "assets/voltar.svg";
-
-const largura = Dimensions.get("screen").width;
 
 import getStyles from "./styles";
 
@@ -22,12 +22,14 @@ interface HeaderProps {
 }
 
 const DEFAULT_HEIGHT = 270;
+const largura = Dimensions.get("screen").width;
 
 export function Header({
   title,
   image = topo,
   height = DEFAULT_HEIGHT,
 }: HeaderProps) {
+  const navigation = useNavigation();
   const styles = getStyles(height);
 
   return (
@@ -39,7 +41,11 @@ export function Header({
         style={styles.gradient}
       />
       <Text style={styles.title}>{title}</Text>
-      <TouchableOpacity onPress={() => {}} style={styles.buttonBack}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.goBack();
+        }}
+        style={styles.buttonBack}>
         <BackIcon color="white" style={styles.back} />
       </TouchableOpacity>
     </>

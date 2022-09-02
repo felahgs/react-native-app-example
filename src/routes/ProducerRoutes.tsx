@@ -18,7 +18,7 @@ export default function ProducerRoutes({
 }: ProducerRoutesProps) {
   const { PRODUCER } = routes;
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={rootPath} component={RootComponent} />
       <Stack.Screen name={PRODUCER} component={Producer} />
     </Stack.Navigator>

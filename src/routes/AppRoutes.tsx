@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 const AppRoutes = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name={"Home Tab"} component={ProducerRoutes} />
         <Tab.Screen name={"Top Producers Tab"} component={TopProducersRoutes} />
       </Tab.Navigator>
