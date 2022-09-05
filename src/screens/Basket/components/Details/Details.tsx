@@ -7,6 +7,10 @@ import {
   ImageSourcePropType,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+import routes from "constants/routes";
 import useTexts from "hooks/useTexts";
 
 import styles from "./styles";
@@ -21,8 +25,17 @@ interface DetailsProps {
   price: string;
 }
 
+const { HOME_TAB } = routes;
+
 export function Details({ name, producer, description, price }: DetailsProps) {
+  const navigation = useNavigation<NativeStackNavigationProp<any>>();
   const { buyButton } = useTexts();
+
+  const handleNavigation = () =>
+    navigation.reset({
+      index: 0,
+      routes: [{ name: HOME_TAB }],
+    });
 
   return (
     <>
@@ -34,7 +47,7 @@ export function Details({ name, producer, description, price }: DetailsProps) {
       <Text style={styles.description}>{description}</Text>
       <Text style={styles.price}>{price}</Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={handleNavigation}>
         <Text style={styles.textButton}>{buyButton}</Text>
       </TouchableOpacity>
     </>

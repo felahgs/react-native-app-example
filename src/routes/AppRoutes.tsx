@@ -5,12 +5,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Coracao from "assets/coracao.svg";
 import Home from "assets/home.svg";
+import routes from "constants/routes";
 
 import ProducerRoutes from "./ProducerRoutes";
 import TopProducersRoutes from "./TopProducersRoutes";
 
 const Tab = createBottomTabNavigator();
 const AppRoutes = () => {
+  const { HOME_TAB, TOP_PRODUCERS_TAB } = routes;
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -30,8 +32,8 @@ const AppRoutes = () => {
           tabBarActiveTintColor: "#2A9F85",
           tabBarInactiveTintColor: "#C7C7C7",
         })}>
-        <Tab.Screen name={"Home Tab"} component={ProducerRoutes} />
-        <Tab.Screen name={"Top Producers Tab"} component={TopProducersRoutes} />
+        <Tab.Screen name={HOME_TAB} component={ProducerRoutes} />
+        <Tab.Screen name={TOP_PRODUCERS_TAB} component={TopProducersRoutes} />
       </Tab.Navigator>
     </NavigationContainer>
   );
