@@ -25,7 +25,7 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 16,
   },
-  baskets: {
+  Baskets: {
     color: "#464646",
     fontSize: 20,
     lineHeight: 32,

@@ -18,12 +18,12 @@ const ProducerCard = ({
   image,
   distance,
   stars,
-  baskets,
+  Baskets,
 }: ProducerCardProps) => {
   const [selected] = useReducer(value => !value, false);
   const navigation = useNavigation<NativeStackNavigationProp<PageStackProps>>();
 
-  const producerProps = { name, image, baskets };
+  const producerProps = { name, image, Baskets };
 
   const handleNavigation = () =>
     navigation.navigate(PRODUCER, { ...producerProps });

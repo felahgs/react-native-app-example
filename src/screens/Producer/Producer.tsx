@@ -15,21 +15,17 @@ import styles from "./styles";
 interface ProducerProps {
   name: string;
   image: ImageSourcePropType;
-  baskets: BasketItemProps[];
+  Baskets: BasketItemProps[];
 }
 
 const Producer = () => {
   const route = useRoute();
-  const { titleProducer, titleCart } = useTexts() as {
-    titleProducer: string;
-    titleCart: string;
-  };
-  const { name, image, baskets } = route.params as ProducerProps;
+  const { titleProducer, titleBasket } = useTexts();
+  const { name, image, Baskets } = route.params as ProducerProps;
 
   const ListHeader = () => {
     return (
       <>
-        {/* <View>Header</View> */}
         <Header title={titleProducer} image={topo} height={150} />
         <View style={styles.content}>
           <View style={styles.logo}>
@@ -37,7 +33,7 @@ const Producer = () => {
             <Text style={styles.producer}>{name}</Text>
           </View>
 
-          <Text style={styles.baskets}>{titleCart}</Text>
+          <Text style={styles.Baskets}>{titleBasket}</Text>
         </View>
       </>
     );
@@ -46,7 +42,7 @@ const Producer = () => {
   return (
     <FlatList
       ListHeaderComponent={ListHeader}
-      data={baskets}
+      data={Baskets}
       renderItem={({ item }) => <Basket {...item} producer={{ name, image }} />}
       style={styles.list}
     />

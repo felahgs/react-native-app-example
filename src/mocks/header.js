@@ -4,8 +4,8 @@ const topo = {
   captionTopProducers: "Veja os produtores com 4+ estrelas!",
   titleProducers: "Produtores",
   titleProducer: "Detalhe do produtor",
-  titleCart: "Cestas",
-  headerCart: "Detalhe da cesta",
+  titleBasket: "Cestas",
+  headerBasket: "Detalhe da cesta",
   buyButton: "Comprar",
   titleItems: "Itens da cesta",
 };

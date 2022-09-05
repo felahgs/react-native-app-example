@@ -6,6 +6,6 @@ export interface PageStackProps {
   [key: string]: {
     name: string;
     image: ImageSourcePropType;
-    baskets: BasketItemProps[];
+    Baskets: BasketItemProps[];
   };
 }

@@ -26,7 +26,7 @@ const produtores = {
       image: green,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
-      baskets: [
+      Baskets: [
         {
           details: {
             name: "Brócolis e Pepino",
@@ -69,7 +69,7 @@ const produtores = {
       image: salad,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
-      baskets: [
+      Baskets: [
         {
           details: {
             name: "Salada completa",
@@ -121,7 +121,7 @@ const produtores = {
       image: jennyJack,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
-      baskets: [
+      Baskets: [
         {
           details: {
             name: "Muita Batata",
@@ -165,7 +165,7 @@ const produtores = {
       image: grow,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
-      baskets: [
+      Baskets: [
         {
           details: {
             name: "Abobora e Aspargos",
@@ -213,7 +213,7 @@ const produtores = {
       image: potager,
       distance: `${gerarNumeroAleatorio(1, 500)}m`,
       stars: gerarNumeroAleatorio(1, 5),
-      baskets: [
+      Baskets: [
         {
           details: {
             name: "Pepinos",

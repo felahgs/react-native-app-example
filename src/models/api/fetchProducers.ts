@@ -10,7 +10,7 @@ export interface ProducerType {
   image: ImageSourcePropType;
   distance: string;
   stars: number;
-  baskets: BasketItemProps[];
+  Baskets: BasketItemProps[];
 }
 
 export interface BasketItemProps {

@@ -16,7 +16,7 @@ import BackIcon from "assets/voltar.svg";
 import getStyles from "./styles";
 
 interface HeaderProps {
-  title: string;
+  title?: string;
   image?: ImageSourcePropType;
   height?: string | number;
 }
@@ -25,7 +25,7 @@ const DEFAULT_HEIGHT = 270;
 const largura = Dimensions.get("screen").width;
 
 export function Header({
-  title,
+  title = "",
   image = topo,
   height = DEFAULT_HEIGHT,
 }: HeaderProps) {
