@@ -8,6 +8,8 @@ const topo = {
   headerBasket: "Detalhe da cesta",
   buyButton: "Comprar",
   titleItems: "Itens da cesta",
+  purchaseMessage:
+    "Agradecemos pela sua compra da cesta $NOME, seu pedido chegara em breve",
 };
 
 export default topo;
