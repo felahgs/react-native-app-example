@@ -29,7 +29,6 @@ const ProducerCard = ({
     navigation.navigate(PRODUCER, { ...producerProps });
 
   return (
-    // <TouchableOpacity style={styles.card} onPress={() => toggleSelected()}>
     <TouchableOpacity onPress={handleNavigation} style={styles.card}>
       <Image
         source={image}

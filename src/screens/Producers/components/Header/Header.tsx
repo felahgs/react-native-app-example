@@ -27,10 +27,6 @@ const Header = ({ topProducers }: HeaderProps) => {
     setHeaderContent(fetchHeader());
   }, []);
 
-  useEffect(() => {
-    console.log("headerContent", headerContent);
-  }, [headerContent]);
-
   return (
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
