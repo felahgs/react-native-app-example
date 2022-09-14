@@ -25,16 +25,26 @@ interface DetailsProps {
   price: string;
 }
 
-const { HOME_TAB } = routes;
+interface MainScreenProps {
+  [key: string]: {
+    purchase: {
+      name: string;
+      price: string;
+      timestamp: number;
+    };
+  };
+}
+
+const { HOME } = routes;
 
 export function Details({ name, producer, description, price }: DetailsProps) {
-  const navigation = useNavigation<NativeStackNavigationProp<any>>();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainScreenProps>>();
   const { buyButton } = useTexts();
 
   const handleNavigation = () =>
-    navigation.reset({
-      index: 0,
-      routes: [{ name: HOME_TAB }],
+    navigation.navigate(HOME, {
+      purchase: { name, timestamp: new Date().valueOf(), price },
     });
 
   return (

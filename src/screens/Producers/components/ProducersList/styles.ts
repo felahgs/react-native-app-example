@@ -52,4 +52,9 @@ export default StyleSheet.create({
     fontSize: 12,
     lineHeight: 19,
   },
+  purchase: {
+    backgroundColor: "#E4F5F3",
+    padding: 16,
+    color: "#464646",
+  },
 });
